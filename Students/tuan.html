@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân - Tuấn</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 sticky top-0 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Nhóm Công nghệ phần mềm</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-gray-200">Trang chủ</a></li>
+                <li><a href="#" class="hover:text-gray-200">Thành viên</a></li>
+                <li><a href="#" class="hover:text-gray-200">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto flex-grow py-10">
+        <section class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg p-6 fade-in">
+            <!-- Avatar -->
+            <div class="md:w-1/3 text-center">
+                <img src="https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-1/450214915_1656705001848143_2537366148361491113_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFtkn7n_FvMCyWfR2F_t02cAacZJDg9ma8BpxkkOD2Zrx0jP-s5Gps3RaVMDrz9GFRE6s-O975sUL_5_f-azqRK&_nc_ohc=isyAN8jQ41wQ7kNvgEtvQzw&_nc_oc=Adjsp9voOJZsdtSGDsp0w1zPMnrpLfdtdkZVJCSEofDiErxs6kaMp3tVS7rNBGnndmXiqQH7lbb4q_r0WBigwv3B&_nc_zt=24&_nc_ht=scontent.fsgn10-2.fna&_nc_gid=A4fZItSGOISnP-0FdXL4lkL&oh=00_AYFqQ8QU_6DoyVZ2geCsoDZOJou9_74jxYa33jLInbpSmg&oe=67D856C1" alt="Ảnh đại diện" class="rounded-full w-48 h-48 mx-auto mb-4 shadow-md">
+                <h1 class="text-3xl font-bold text-gray-800">Nguyễn Văn Tuấn</h1>
+            </div>
+            <!-- Thông tin cá nhân -->
+            <div class="md:w-2/3 p-4">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">Thông tin cá nhân</h2>
+                <p class="text-gray-700">
+                    <!-- Chừa chỗ để bạn điền thông tin -->
+                    Họ và tên: Nguyễn Anh Tuấn <br>
+                    Email: abc@gmail.com <br>
+                    Số điện thoại: 0123123472 <br>
+                    Giới thiệu ngắn: Xin chào, tôi là Nguyễn Văn Tuấn, một sinh viên đam mê Công nghệ phần mềm.
+                    Tôi yêu thích việc khám phá và phát triển các giải pháp công nghệ sáng tạo, đặc biệt trong 
+                    lĩnh vực lập trình web và ứng dụng. Với tinh thần học hỏi không ngừng, tôi luôn nỗ lực trau 
+                    dồi kỹ năng và kiến thức để theo đuổi ước mơ trở thành một lập trình viên chuyên nghiệp.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quá trình học tập -->
+        <section class="mt-10 bg-white rounded-lg shadow-lg p-6 fade-in">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">Quá trình học tập</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <!-- Chừa chỗ để bạn điền -->
+                <li>Môn học/Kỹ năng 1: Kỹ năng github</li>
+                <li>Môn học/Kỹ năng 2: Tiếng Anh B1kdkkdkđ</li>
+                <li>Dự án đã làm: Social Media</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2025 Nhóm Công nghệ phần mềm. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript cho hiệu ứng cơ bản -->
+    <script>
+        // Thêm tương tác nếu cần (ví dụ: nút Back to Top)
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.body.insertAdjacentHTML('beforeend', '<button onclick="scrollToTop()" class="fixed bottom-5 right-5 bg-blue-600 text-white p-2 rounded-full">↑</button>');
+            } else {
+                let btn = document.querySelector('.fixed');
+                if (btn) btn.remove();
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
