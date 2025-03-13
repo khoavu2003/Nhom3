@@ -1,0 +1,74 @@
+/* Định dạng tổng thể */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    color: #333;
+}
+
+/* Tiêu đề trang */
+header {
+    background: rgba(0, 119, 182, 0.8);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Các phần nội dung */
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề nhỏ */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #005f99;
+}
+
+/* Hiệu ứng fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Danh sách thành viên */
+.members p {
+    background: rgba(0, 119, 182, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.members p:hover {
+    transform: scale(1.05);
+    background: rgba(0, 119, 182, 0.4);
+}
+.member-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.member-link:hover {
+    color: #005f99; /* Màu nhấn khi hover */
+}

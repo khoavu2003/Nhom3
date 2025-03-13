@@ -1,0 +1,84 @@
+/* Tổng thể trang */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    color: #333;
+}
+
+/* Khung thông tin */
+.profile-container {
+    text-align: center;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+/* Ảnh đại diện */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Tên & Vai trò */
+h1 {
+    font-size: 24px;
+    color: #005f99;
+}
+
+.role {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tiểu sử */
+.bio {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Nút quay lại */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #005f99;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background: #003f6b;
+}
+
+/* Hiệu ứng fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
