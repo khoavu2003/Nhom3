@@ -1,84 +1,113 @@
-/* Tổng thể trang */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Màu xanh da trời nhạt */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #89f7fe, #66a6ff);
-    color: #333;
+    min-height: 100vh;
 }
 
-/* Khung thông tin */
 .profile-container {
+    max-width: 700px;
+    width: 90%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.profile-card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.profile-card:hover {
-    transform: scale(1.05);
-}
-
-/* Ảnh đại diện */
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-/* Tên & Vai trò */
 h1 {
     font-size: 24px;
-    color: #005f99;
+    color: #1565c0;
 }
 
 .role {
     font-size: 18px;
-    font-weight: bold;
+    color: #444;
+}
+
+.bio {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Section chung */
+section {
+    text-align: left;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #1e88e5;
+    margin-bottom: 5px;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+li {
+    font-size: 14px;
+    margin: 5px 0;
     color: #333;
 }
 
-/* Tiểu sử */
-.bio {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+a {
+    color: #1e88e5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0d47a1;
 }
 
 /* Nút quay lại */
 .back-btn {
     display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    background: #005f99;
+    margin-top: 20px;
+    padding: 8px 15px;
+    background: #1e88e5;
     color: white;
-    border-radius: 8px;
-    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .back-btn:hover {
-    background: #003f6b;
+    background: #1565c0;
 }
 
-/* Hiệu ứng fade-in */
+/* Hiệu ứng xuất hiện */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 
-.fade-in.visible {
+.fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
