@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            section.classList.toggle("hidden");
+            section.classList.toggle("fade-in");
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        .nav-button:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .avatar:hover {
+            transform: rotate(5deg) scale(1.1);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-blue-100 text-gray-900 flex">
+    <div class="w-1/4 bg-blue-700 text-white p-6 min-h-screen">
+        <div class="text-center">
+            <img src="https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/474687288_1594177965307916_697961603255292823_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHvROn1cio_APdRIhGn_j_iScjqAUOwxENJyOoBQ7DEQ49F-cQNDnXz4a7yfFJO6GujwIJ8pv7KLe3y3S-4wXF7&_nc_ohc=3VNyF1k0vZ0Q7kNvgHc92jl&_nc_oc=Adg2QMJ_lvOFD0uNTtkGQxT5psJBk2JHR5ZIst3QeE97NEAwXOmUY7sPIgcckMWCDPcmE4IwQ5dOr2_PvFArtqml&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=Aq4TfnyxgXCweSUR8lCK1nk&oh=00_AYFJ4jOLgPUlrtQhhrV7ZFTVvUXefh-cnpb3f7ZLmqw2iw&oe=67D856DD" alt="Avatar" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg avatar">
+            <h1 class="text-2xl font-bold mt-4">Huỳnh Hải Đăng</h1>
+        </div>
+        <nav class="mt-6">
+            <button class="block w-full text-left p-3 rounded-lg hover:bg-blue-800 nav-button" onclick="toggleSection('personal-info')">
+                <i class="fas fa-user-circle"></i> Thông tin cá nhân
+            </button>
+            <button class="block w-full text-left p-3 rounded-lg hover:bg-blue-800 nav-button" onclick="toggleSection('education')">
+                <i class="fas fa-graduation-cap"></i> Quá trình học tập
+            </button>
+            <button class="block w-full text-left p-3 rounded-lg hover:bg-blue-800 nav-button" onclick="toggleSection('skills')">
+                <i class="fas fa-lightbulb"></i> Kỹ năng
+            </button>
+            <button class="block w-full text-left p-3 rounded-lg hover:bg-blue-800 nav-button" onclick="toggleSection('projects')">
+                <i class="fas fa-code"></i> Dự án
+            </button>
+            <button class="block w-full text-left p-3 rounded-lg hover:bg-blue-800 nav-button" onclick="toggleSection('contact')">
+                <i class="fas fa-envelope"></i> Liên hệ
+            </button>
+        </nav>
+    </div>
+    <div class="w-3/4 p-10">
+        <div id="personal-info" class="hidden p-6 bg-white shadow-lg rounded-lg fade-in">
+            <h2 class="text-2xl font-bold text-blue-700"><i class="fas fa-user"></i> Thông tin cá nhân</h2>
+            <p><strong>Họ tên:</strong> Huỳnh Hải Đăng</p>
+            <p><strong>Quê quán:</strong> 🚀 Cà Mau</p>
+            <p><strong>Ngày sinh:</strong> 🎮 20-08-2003</p>
+            <p><strong>Sở thích:</strong> 💻 Lập trình, 🤖 game, xem phim 🎬</p>
+            <p><strong>Định hướng:</strong> 🚀 Phát triển phần mềm</p>
+        </div>
+        <div id="education" class="hidden p-6 bg-white shadow-lg rounded-lg fade-in">
+            <h2 class="text-2xl font-bold text-blue-700"><i class="fas fa-school"></i> Quá trình học tập</h2>
+            <p><strong>Trường:</strong> 📚 Đại học Công Nghệ Hutech - Chuyên ngành Công nghệ thông tin</p>
+            <p><strong>Khóa học:</strong> 2021-2025</p>
+        </div>
+        <div id="skills" class="hidden p-6 bg-white shadow-lg rounded-lg fade-in">
+            <h2 class="text-2xl font-bold text-blue-700"><i class="fas fa-tools"></i> Kỹ năng</h2>
+            <ul class="list-disc list-inside">
+                <li>💻 Lập trình cơ bản </li>
+                <li>🎨 Thiết kế UI/UX</li>
+                <li>🤖 Kĩ năng làm việc nhóm và giao tiếp</li>
+            </ul>
+        </div>
+        <div id="projects" class="hidden p-6 bg-white shadow-lg rounded-lg fade-in">
+            <h2 class="text-2xl font-bold text-blue-700"><i class="fas fa-laptop-code"></i> Dự án cá nhân</h2>
+            <p>- 🌐 Website mạng xã hội</p>
+            <p>- 🍲 Ứng dụng quản lý công thức nấu ăn</p>
+        </div>
+        <div id="contact" class="hidden p-6 bg-white shadow-lg rounded-lg fade-in">
+            <h2 class="text-2xl font-bold text-blue-700"><i class="fas fa-address-book"></i> Liên hệ</h2>
+            <p><strong>Số Điện Thoại:</strong> <a href="#" class="text-blue-600 hover:underline">💻 0854517768</a></p>
+            <p><strong>Email:</strong> <a href="#" class="text-blue-600 hover:underline">📧 huynhhaidang20082003@gmail.com</a></p>
+            <p><strong>GitHub:</strong> <a href="#" class="text-blue-600 hover:underline">🐙 github.com/dang200803</a></p>
+        </div>
+    </div>
+</body>
+</html>
